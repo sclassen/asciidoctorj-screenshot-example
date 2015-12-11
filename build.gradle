@@ -1,0 +1,24 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+    }
+    dependencies {
+        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.3'
+        classpath 'org.asciidoctor:asciidoctorj-screenshot:1.0.0-SNAPSHOT'
+        System.getProperties().get "geb.build.reportsDir", "build/asciidoc/html5/screenshots"
+       // System.getProperties().get "geb.build.baseUrl", "http://yourapp.com:port/app"
+    }
+}
+
+apply plugin: 'org.asciidoctor.gradle.asciidoctor'
+
+asciidoctor {
+
+    sourceDir = file('src/asciidoc')
+
+	attributes = [
+	    stylesheet: "css/custom.css",
+        'screenshot-dir-name': "screenshots"
+	]
+}
