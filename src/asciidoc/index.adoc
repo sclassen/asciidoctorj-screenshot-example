@@ -10,11 +10,11 @@ TIP: This is an example using screenshot plugin for gradle-asciidoctor
 
 Go to the Gist AsciiDoctor main page at http://gist.asciidoctor.org/
 
-[driveBrowser, dimension=FRAME_BROWSER]
+[driveBrowser, dimension=BROWSER]
 go "http://gist.asciidoctor.org/"
 waitFor(5,0.1){$("#content h1").size()>0}
 
-[takeScreenshot, name=mainpage, dimension=FRAME_BROWSER]
+[takeScreenshot, name=mainpage, frame=BROWSER]
 The main page
 
 Then enter a Gist number that point to a file written in asciidoctor. For instance 9a8d3f1d32a8f0656a42 as for https://gist.github.com/mojavelinux/9a8d3f1d32a8f0656a42
@@ -28,5 +28,5 @@ when you validate you get the result
 go "http://gist.asciidoctor.org/?9a8d3f1d32a8f0656a42"
 waitFor(5,0.1){$("#content h1").size()>0}
 
-[takeScreenshot, name=gistresult, dimension=FRAME_BROWSER]
+[takeScreenshot, name=gistresult, frame=BROWSER]
 That's it
