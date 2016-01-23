@@ -1,6 +1,6 @@
 = AsciiDoctor Screenshot
 
-This Asciidotor package automate your documentation of your webapp using screenshots.
+This Asciidoctor package automate your documentation of your webapp using screenshots.
 No more hassles when you change simple settings like CSS or change that button that was too big.
 Your documentation stays up to date!
 
