@@ -1,55 +1,50 @@
 = How to use Google properly
-Doc Writer <fx.thoorens@gmail.com>
+Doc Writer
 v1.0
 :example-caption!:
 
-NOTE: This is an example using screenshot plugin for gradle-asciidoctor
+NOTE: This is an example using screenshot extension for asciidoctorJ
 
 == Process
 First you need to open your favorite browser and navigate to http://google.com
 
-[takeScreenshot, name=google1, url=http://google.com, frame=IMAC]
+[takeScreenshot, name=google1, url=http://google.com, frame=BROWSER]
 The Google landing page
 
 Then in the input form, write a query like "asciidoctor"
 
 [driveBrowser]
 $("input", name: "q").value("asciidoctor")
-$("button", name: "btnG").click()
-waitFor(5,0.5){$("h3.r a").size()>0}
-
+waitFor(5,0.5){$("li.sbsb_c").size()>0}
 
 
 [takeScreenshot, frame=BROWSER]
 Some propositions should appear
 
-You don't even need to click answers appear in *realtime*
 
-After a while the answer appears, you don't event need to click on a button
+[driveBrowser]
+$("button", name: "btnG").click()
+waitFor(5,0.5){$("h3.r a").size()>0}
+
 
 [takeScreenshot, frame=BROWSER]
 Awesome!
 
+
 Look at the first link and click on it
-[takeScreenshot, name=google4, selector="h3.r"]
+[takeScreenshot, name=google4, selector="div#rso > div.g div.rc h3.r"]
 Yep that very one link in blue
 
-[driveBrowser, frame=IPHONE4]
-$("h3.r a").click()
+[driveBrowser, frame=IPHONE5]
+$("div#rso > div.g div.rc h3.r").click()
 
 
 And you get to the asciidoctor landing page, well and it is responsive
 [takeScreenshot, frame=IPHONE5]
 Look Ma, it's iphone5!
 
-[takeScreenshot, frame=IPHONE6]
-Look Ma, it's iphone6!
-
-[takeScreenshot, frame=IPHONE6PLUS]
-Look Ma, it's iphone6plus!
-
-[takeScreenshot, frame=SAMSUNG_S4]
-Look Ma, it's samsung s4!
+[takeScreenshot, frame=NEXUS5]
+Look Ma, it's nexus 5!
 
 Here you have just unlocked the google *God Badge*. Congratulations!!!
 

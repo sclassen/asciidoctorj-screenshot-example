@@ -5,7 +5,7 @@ buildscript {
     }
     dependencies {
         classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.3'
-        classpath 'org.asciidoctor:asciidoctorj-screenshot:1.0.0-SNAPSHOT'
+        classpath 'org.asciidoctor:asciidoctorj-screenshot:0.1.0-SNAPSHOT'
     }
 }
 
@@ -14,7 +14,6 @@ apply plugin: 'org.asciidoctor.gradle.asciidoctor'
 asciidoctor {
     sourceDir = file('src/asciidoc')
     attributes = [
-            stylesheet           : "css/custom.css",
-            'screenshot-dir-name': "screenshots"
+            'screenshot-dir-name': "../screens"
     ]
 }

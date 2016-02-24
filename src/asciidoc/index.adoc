@@ -1,9 +1,9 @@
 = How to use Gist AsciiDoctor
-Doc Writer <fx.thoorens@gmail.com>
+Doc Writer
 v1.0
 :example-caption!:
 
-TIP: This is an example using screenshot plugin for gradle-asciidoctor
+TIP: This is an example using screenshot extension for asciidoctorJ
 
 
 == Process
