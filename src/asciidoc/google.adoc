@@ -8,43 +8,46 @@ NOTE: This is an example using screenshot extension for asciidoctorJ
 == Process
 First you need to open your favorite browser and navigate to http://google.com
 
-[takeScreenshot, name=google1, url=http://google.com, frame=BROWSER]
-The Google landing page
+.The Google landing page
+takeScreenshot::http://google.com[name=google1, frame=browser]
 
 Then in the input form, write a query like "asciidoctor"
 
 [driveBrowser]
+....
 $("input", name: "q").value("asciidoctor")
 waitFor(5,0.5){$("li.sbsb_c").size()>0}
+....
 
-
-[takeScreenshot, frame=BROWSER]
-Some propositions should appear
-
+.Some propositions should appear
+takeScreenshot::[frame=browser]
 
 [driveBrowser]
+....
 $("button", name: "btnG").click()
 waitFor(5,0.5){$("h3.r a").size()>0}
+....
 
-
-[takeScreenshot, frame=BROWSER]
-Awesome!
-
+.Awesome!
+takeScreenshot::[frame=browser]
 
 Look at the first link and click on it
-[takeScreenshot, name=google4, selector="div#rso > div.g div.rc h3.r"]
-Yep that very one link in blue
 
-[driveBrowser, frame=IPHONE5]
+.Yep that very one link in blue
+takeScreenshot::[name=google4, selector="div#rso > div.g div.rc h3.r"]
+
+[driveBrowser, iphone5]
+....
 $("div#rso > div.g div.rc h3.r").click()
-
+....
 
 And you get to the asciidoctor landing page, well and it is responsive
-[takeScreenshot, frame=IPHONE5]
-Look Ma, it's iphone5!
 
-[takeScreenshot, frame=NEXUS5]
-Look Ma, it's nexus 5!
+.Look Ma, it's iphone5!
+takeScreenshot::[frame=iphone5]
+
+.Look Ma, it's nexus 5!
+takeScreenshot::[frame=nexus5]
 
 Here you have just unlocked the google *God Badge*. Congratulations!!!
 
