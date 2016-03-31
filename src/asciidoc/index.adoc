@@ -10,27 +10,27 @@ TIP: This is an example using screenshot extension for asciidoctorJ
 
 Go to the Gist AsciiDoctor main page at http://gist.asciidoctor.org/
 
-[driveBrowser, browser]
+[geb, browser]
 ....
 go "http://gist.asciidoctor.org/"
 waitFor(5,0.1){$("#content h1").size()>0}
 ....
 
 .The main page
-takeScreenshot::[mainpage, browser]
+screenshot::[mainpage, browser]
 
 Then enter a Gist number that point to a file written in asciidoctor. For instance 9a8d3f1d32a8f0656a42 as for https://gist.github.com/mojavelinux/9a8d3f1d32a8f0656a42
 
 .Awesome gist example by mojavelinux
-takeScreenshot::https://gist.github.com/mojavelinux/9a8d3f1d32a8f0656a42[name=gist, selector=".entry-title"]
+screenshot::https://gist.github.com/mojavelinux/9a8d3f1d32a8f0656a42[name=gist, selector=".entry-title"]
 
 when you validate you get the result
 
-[driveBrowser]
+[geb]
 ....
 go "http://gist.asciidoctor.org/?9a8d3f1d32a8f0656a42"
 waitFor(5,0.1){$("#content h1").size()>0}
 ....
 
 .That's it
-takeScreenshot::[gistresult, browser]
+screenshot::[gistresult, browser]
