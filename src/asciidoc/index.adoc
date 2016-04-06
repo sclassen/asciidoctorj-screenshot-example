@@ -1,36 +1,38 @@
-= How to use Gist AsciiDoctor
-Doc Writer
-v1.0
-:example-caption!:
+= How to Use DocGist
+Stephan Classen
+v1.0.0
 
-TIP: This is an example using screenshot extension for asciidoctorJ
-
+This is an example document that uses the screenshot extension for AsciidoctorJ.
+The document explains how to use DocGist.
 
 == Process
 
-Go to the Gist AsciiDoctor main page at http://gist.asciidoctor.org/
+Begin by navigating to the main DocGist page at http://gist.asciidoctor.org/.
 
 [geb, browser]
 ....
 go "http://gist.asciidoctor.org/"
-waitFor(5,0.1){$("#content h1").size()>0}
+waitFor(5,0.1) { $("#content h1").size() > 0 }
 ....
 
-.The main page
-screenshot::[mainpage, browser]
+.The main DocGist page
+screenshot::[docgist-main-page, browser]
 
-Then enter a Gist number that point to a file written in asciidoctor. For instance 9a8d3f1d32a8f0656a42 as for https://gist.github.com/mojavelinux/9a8d3f1d32a8f0656a42
+Then enter the URL to a (GitHub) gist that contains a single file written in AsciiDoc.
+For instance, enter:
 
-.Awesome gist example by mojavelinux
-screenshot::https://gist.github.com/mojavelinux/9a8d3f1d32a8f0656a42[name=gist, selector=".entry-title"]
+ https://gist.github.com/mojavelinux/9a8d3f1d32a8f0656a42
 
-when you validate you get the result
+.Example gist title
+screenshot::https://gist.github.com/mojavelinux/9a8d3f1d32a8f0656a42[name=gist-source, selector=".entry-title"]
+
+When you press enter, you get the following result:
 
 [geb]
 ....
 go "http://gist.asciidoctor.org/?9a8d3f1d32a8f0656a42"
-waitFor(5,0.1){$("#content h1").size()>0}
+waitFor(5,0.1) { $("#content h1").size() > 0 }
 ....
 
-.That's it
-screenshot::[gistresult, browser]
+.Example gist content rendered in DocGist
+screenshot::[gist-result, browser]
