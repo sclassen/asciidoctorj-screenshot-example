@@ -24,7 +24,7 @@ For instance, enter:
  https://gist.github.com/mojavelinux/9a8d3f1d32a8f0656a42
 
 .Example gist title
-screenshot::https://gist.github.com/mojavelinux/9a8d3f1d32a8f0656a42[name=gist-source, selector=".entry-title"]
+screenshot::https://gist.github.com/mojavelinux/9a8d3f1d32a8f0656a42[name=gist-source, selector=".repohead-details-container h1"]
 
 When you press enter, you get the following result:
 
