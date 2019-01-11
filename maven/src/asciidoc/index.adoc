@@ -1,0 +1,38 @@
+= How to Use DocGist
+Stephan Classen
+v1.0.0
+
+This is an example document that uses the screenshot extension for AsciidoctorJ.
+The document explains how to use DocGist.
+
+== Process
+
+Begin by navigating to the main DocGist page at http://gist.asciidoctor.org/.
+
+[geb, browser]
+....
+go "http://gist.asciidoctor.org/"
+waitFor(5,0.1) { $("#content h1").size() > 0 }
+....
+
+.The main DocGist page
+screenshot::[docgist-main-page, browser]
+
+Then enter the URL to a (GitHub) gist that contains a single file written in AsciiDoc.
+For instance, enter:
+
+ https://gist.github.com/mojavelinux/9a8d3f1d32a8f0656a42
+
+.Example gist title
+screenshot::https://gist.github.com/mojavelinux/9a8d3f1d32a8f0656a42[name=gist-source, selector=".entry-title"]
+
+When you press enter, you get the following result:
+
+[geb]
+....
+go "http://gist.asciidoctor.org/?9a8d3f1d32a8f0656a42"
+waitFor(5,0.1) { $("#content h1").size() > 0 }
+....
+
+.Example gist content rendered in DocGist
+screenshot::[gist-result, browser]
