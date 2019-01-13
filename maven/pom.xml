@@ -62,6 +62,9 @@
                         </goals>
                         <configuration>
                             <backend>html5</backend>
+                            <attributes>
+                                <screenshot-dir-name>target/screen</screenshot-dir-name>
+                            </attributes>
                         </configuration>
                     </execution>
                 </executions>
