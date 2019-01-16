@@ -6,7 +6,7 @@ buildscript {
     dependencies {
         classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.9.2'
 
-        classpath 'org.asciidoctor:asciidoctorj-screenshot:0.2.0', {
+        classpath 'org.asciidoctor:asciidoctorj-screenshot:0.2.2', {
             exclude group: 'org.codehaus.groovy', module: 'groovy-all'
         }
         classpath 'org.seleniumhq.selenium:selenium-support:3.141.59'
@@ -19,6 +19,7 @@ apply plugin: 'org.asciidoctor.gradle.asciidoctor'
 asciidoctor {
     sourceDir = file('src/asciidoc')
     attributes = [
+            'imagesdir': "images",
             'screenshot-dir-name': "../screens"
     ]
 }

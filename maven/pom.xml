@@ -12,7 +12,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <groovy.version>2.4.16</groovy.version>
         <asciidoctor.maven.plugin.version>1.5.7.1</asciidoctor.maven.plugin.version>
-        <asciidoctorj-screenshot.version>0.2.0</asciidoctorj-screenshot.version>
+        <asciidoctorj-screenshot.version>0.2.2</asciidoctorj-screenshot.version>
         <selenium.version>3.141.59</selenium.version>
     </properties>
 
@@ -63,7 +63,8 @@
                         <configuration>
                             <backend>html5</backend>
                             <attributes>
-                                <screenshot-dir-name>target/screen</screenshot-dir-name>
+                                <imagesdir>./images</imagesdir>
+                                <screenshot-dir-name>../screens</screenshot-dir-name>
                             </attributes>
                         </configuration>
                     </execution>
