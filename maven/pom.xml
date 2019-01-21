@@ -35,11 +35,6 @@
                         <version>${asciidoctorj-screenshot.version}</version>
                     </dependency>
                     <dependency>
-                        <groupId>org.asciidoctor</groupId>
-                        <artifactId>asciidoctorj-screenshot</artifactId>
-                        <version>${asciidoctorj-screenshot.version}</version>
-                    </dependency>
-                    <dependency>
                         <groupId>org.seleniumhq.selenium</groupId>
                         <artifactId>selenium-support</artifactId>
                         <version>${selenium.version}</version>
